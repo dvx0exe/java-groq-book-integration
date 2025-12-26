@@ -23,7 +23,7 @@ public class GroqClient {
             String nomeDoAutor =("Lewis Carroll") ;//leia.nextLine();
 
             String promptDoUsuario = String.format(
-                    "Liste todos os livros do autor '%s'. " +
+                    "Liste os 5 livros do autor '%s'. " +
                             "Retorne APENAS o JSON cru, sem markdown. " +
                             "Estrutura: objeto com lista 'bibliografia'. " +
                             "Campos: nome_do_livro, ano_publicacao (apenas numeros), editora_classica, numero_paginas_estimado, genero_literario, resumo_sinopse.",
@@ -44,7 +44,7 @@ public class GroqClient {
                             }
                         ],
                         "response_format": { "type": "json_object" },
-                        "temperature": 0.2
+                        "temperature": 0.0
                     }
                     """.formatted(promptDoUsuario.replace("\"", "\\\""));
 
